@@ -1,0 +1,4 @@
+29.09.2026 {
+    First 2 hours session. Doind absolutly nothing, because i dont known much ubout html/css
+    trying to build design my website, trying to learn html/css
+}

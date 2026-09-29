@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: var(--background-color);
+}
+.wrapper {
+    margin: 0 auto;
+    width: 1322px;
+    min-height: 100vh;
+}
+
+
+
+/*         HEADER           */
+
+header {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+}
+
+.header-wrapper {
+    margin: 20px auto;
+    width: 1322px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav {
+    width: 50%;
+}
+
+.header .ul-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav a {
+    color: var(--text-color);
+    font-size: 15px;
+    transition: all 0.3s ease-out;
+}
+
+.header__nav a:hover {
+    color: var(--text-color__on-hover);
+}
+
+
+.header-logo {
+    color: var(--text-color);
+    font-size: 32px;
+}
+
+
+
+/*             FILM               */
+
+.film-wrapper {
+    background-color: azure;
+    width: 75%;
+    margin-top: 50px;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.film-content {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.film-info {
+    padding-left: 15px;
+}
+
+
+.film-ul {
+    width: 120%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.film-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+    background-color: rgb(235, 9, 9);
+}
+
+.film-content button:hover {
+    background-color: rgb(8, 165, 8);
+}
+
+.film-content .film-img {
+    flex-shrink: 0; 
+}
+
+.film-content .film-img img {
+    display: block;
+    max-width: 400px;
+    padding-right: 30px;
+    height: auto;
+}

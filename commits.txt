@@ -2,3 +2,12 @@
     First 2 hours session. Doind absolutly nothing, because i dont known much ubout html/css
     trying to build design my website, trying to learn html/css
 }
+
+
+02.10.2026 v0.0.1 {
+    first super beta alfa version of website! working only on my pc, i dont opitmized site on phones or smth. works today 2.5h. ai helps me a lot!
+    changes {
+        1: add first version of film card
+        2: add buttons, u can click on watched, or watch (u go to url in google to watching your film)
+    }
+}

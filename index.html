@@ -33,29 +33,59 @@
                         <li><a href="#">Заглушка</a></li>
                     </ul>
                 </nav>
-            </div>
+            </div> 
         </header>
 
 
         <div class="films">
+            <h1 class="films__title">Your list of films</h1>
             <div class="films-list">
-                <div class="films__title">
-                    <h1>Your list of films</h1>
-                </div>
-
-                <div class="film-wrapper">
-                    <div class="film-content">
-                        <div class="film-info">
-                            <ul class="film-ul">
-                                <li><p>Name: AzureRay</p></li>
-                                <li><p>Rate: 3/10</p></li>
-                                <li><p>Lenght: 1h 35min</p></li>
-                            </ul>
-                            <button class="check-status">Watched</button>
+                <article class="film-card">
+                        <div class="film-card__poster">
+                            <img src="public/images/film-blue.png" alt="Постер фильма Azure Ray" loading="lazy">
                         </div>
-                        <div class="film-img"><img src="/public/images/film-blue.png" alt=""></div>
-                    </div>
-                </div>
+                        <h2 class="film-card__title">Azure Ray</h2>
+                        <ul class="film-card__info">
+                            <li class="film-card__rate">Rate: 3.5 / 10</li>
+                            <li class="film-card__length">Length: 1 hour 35 minutes</li>
+                        </ul>
+                        <div class="film-card__actions">
+                            <button class="film-card__btn film-card__btn--watched">Просмотрено</button>
+                            <button class="film-card__btn film-card__btn--watch">Смотреть</button>                        
+                        </div>  
+                </article>        
+                
+                
+                <article class="film-card">
+                        <div class="film-card__poster">
+                            <img src="public/images/spider-man.jpg" alt="Постер фильма Человек Паук" loading="lazy">
+                        </div>
+                        <h2 class="film-card__title">Человек Паук</h2>
+                        <ul class="film-card__info">
+                            <li class="film-card__rate">Rate: 6 / 10</li>
+                            <li class="film-card__length">Length: 2 hour 35 minutes</li>
+                        </ul>
+                        <div class="film-card__actions">
+                            <button class="film-card__btn film-card__btn--watched">Просмотрено</button>
+                            <button class="film-card__btn film-card__btn--watch">Смотреть</button>                        
+                        </div>  
+                </article>     
+
+                
+                <article class="film-card">
+                        <div class="film-card__poster">
+                            <img src="public/images/ratatui.jpg" alt="Постер фильма Рататуй" loading="lazy">
+                        </div>
+                        <h2 class="film-card__title">Рататуй</h2>
+                        <ul class="film-card__info">
+                            <li class="film-card__rate">Rate: 7 / 10</li>
+                            <li class="film-card__length">Length: 1 hour 49 minutes</li>
+                        </ul>
+                        <div class="film-card__actions">
+                            <button class="film-card__btn film-card__btn--watched">Просмотрено</button>
+                            <button class="film-card__btn film-card__btn--watch">Смотреть</button>                        
+                        </div>  
+                </article>     
             </div>
         </div>
     </div>

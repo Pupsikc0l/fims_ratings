@@ -46,13 +46,13 @@ header {
     justify-content: space-between;
 }
 
-.header__nav a {
+.header__nav p {
     color: var(--text-color);
     font-size: 15px;
     transition: all 0.3s ease-out;
 }
 
-.header__nav a:hover {
+.header__nav p:hover {
     color: var(--text-color__on-hover);
 }
 
@@ -66,8 +66,8 @@ header {
 .films-list {
     max-width: 1362px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .films__title {
@@ -77,6 +77,34 @@ header {
     font-size: 25px;
     font-weight: 600;
     text-align: center;
+}
+
+
+/*             BODY               */
+
+
+
+.showPopup {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 12px 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+    background-color: #d2f53ae7;
+    color: #353333;
+    transition: all 0.3s ease-out;
+}
+
+.showPopup:hover {
+    background-color: #b8bb26e7;
+}
+
+
+.films {
+    margin-top: 50px
 }
 
 /*             FILM               */
@@ -128,21 +156,192 @@ header {
 }
 
 .film-card__btn--watched {
-    background-color: #e63946;
+    background-color: var(--button-color);
     color: #fff;
-
+    transition: all 0.3s ease-out;
 }
+
 
 .film-card__btn--watched.is-active {
-    background-color: #2a9d8f;
+    background-color: #2a9d5a;
     color: #fff;
 }
 
+
 .film-card__btn--watch {
-    background-color: #e63946;;
+    background-color: var(--button-color);
     color: #fff;
     transition: all 0.3s ease-out;
 }
 .film-card__btn--watch:hover {
-    background-color: #c1121f;
+    background-color: var(--button-color_on-hover);
+}
+
+
+
+/*         POP-UP        */
+
+.addFilm {
+    width: 700px;
+    height: 930px;
+    background-color: rgb(128, 133, 133);
+    margin: auto;
+    border: none;
+    border-radius: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.addFilm::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.addFilm__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 20px auto;
+}
+
+.addFilm__form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 500px;
+}
+
+.addFilm__field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.addFilm__field-rate {
+    gap: 5px;
+}
+
+.addFilm label {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.addFilm input[type="text"] {
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-family: inherit;
+}
+
+.addFilm__rate-row {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.addFilm__rate-row output {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.addFilm__rate-row input[type="range"] {
+    flex: 1;
+}
+
+.addFilm__rate-row output {
+    min-width: 40px;
+}
+
+.addFilm__actions {
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+}
+
+.addFilm__actions button {
+    flex: 1;
+    padding: 20px 40px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+}
+
+.addFilm__actions button[type="button"] {
+    background-color: var(--button-color);
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+.addFilm__actions button[type="button"]:hover {
+    background-color: var(--button-color__cancel);
+}
+
+
+.addFilm__actions button[type="submit"] {
+    background-color: var(--button-color);
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+
+
+.addFilm__actions button[type="submit"]:hover {
+    background-color: var(--button-color_on-hover);
+}
+
+
+
+.addFilm input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);   
+    white-space: nowrap;
+}
+
+.addFilm__dropZone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 200px;
+    border: 4px dashed #686262;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.addFilm__dropzone:hover {
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.addFilm__dropzone-text {
+    color: #333;
+    font-size: 15px;
+    text-align: center;
+}
+
+.addFilm__preview {
+    display: none;
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.addFilm__preview.is-visible {
+    display: block;
+}
+
+.addFilm__dropzone:has(.addFilm__preview.is-visible) .addFilm__dropzone-text {
+    display: none;
 }

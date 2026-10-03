@@ -1,5 +1,8 @@
 :root {
     --text-color: #2f4d5e;
     --text-color__on-hover: #67919E;
-    --background-color: #b9acdd;
+    --background-color: #c9c9cc;
+    --button-color: #6bd4e2ef;
+    --button-color_on-hover: #a7c112;
+    --button-color__cancel: #be5332;
 }

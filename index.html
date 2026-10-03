@@ -27,67 +27,83 @@
                 <span class="header-logo">RATe</span>
                 <nav class="header__nav">
                     <ul class="ul-list">
-                        <li><a href="#">Заглушка</a></li>
-                        <li><a href="#">Заглушка</a></li>
-                        <li><a href="#">Заглушка</a></li>
-                        <li><a href="#">Заглушка</a></li>
+                        <li><p>Заглушка</p></li>
+                        <li><p>Заглушка</p></li>
+                        <li><p>Заглушка</p></li>
+                        <li><p>Заглушка</p></li>
                     </ul>
                 </nav>
             </div> 
         </header>
+            
+            <button class="showPopup">Создать фильм</button>
+        
+            <div class="films">
 
+                <h1 class="films__title">Your list of films</h1>
 
-        <div class="films">
-            <h1 class="films__title">Your list of films</h1>
-            <div class="films-list">
-                <article class="film-card">
-                        <div class="film-card__poster">
-                            <img src="public/images/film-blue.png" alt="Постер фильма Azure Ray" loading="lazy">
-                        </div>
-                        <h2 class="film-card__title">Azure Ray</h2>
-                        <ul class="film-card__info">
-                            <li class="film-card__rate">Rate: 3.5 / 10</li>
-                            <li class="film-card__length">Length: 1 hour 35 minutes</li>
-                        </ul>
-                        <div class="film-card__actions">
-                            <button class="film-card__btn film-card__btn--watched">Просмотрено</button>
-                            <button class="film-card__btn film-card__btn--watch">Смотреть</button>                        
-                        </div>  
-                </article>        
-                
-                
-                <article class="film-card">
-                        <div class="film-card__poster">
-                            <img src="public/images/spider-man.jpg" alt="Постер фильма Человек Паук" loading="lazy">
-                        </div>
-                        <h2 class="film-card__title">Человек Паук</h2>
-                        <ul class="film-card__info">
-                            <li class="film-card__rate">Rate: 6 / 10</li>
-                            <li class="film-card__length">Length: 2 hour 35 minutes</li>
-                        </ul>
-                        <div class="film-card__actions">
-                            <button class="film-card__btn film-card__btn--watched">Просмотрено</button>
-                            <button class="film-card__btn film-card__btn--watch">Смотреть</button>                        
-                        </div>  
-                </article>     
+                <div class="films-list">
+                    <!-- список фильмов -->
+                </div>
 
-                
-                <article class="film-card">
-                        <div class="film-card__poster">
-                            <img src="public/images/ratatui.jpg" alt="Постер фильма Рататуй" loading="lazy">
-                        </div>
-                        <h2 class="film-card__title">Рататуй</h2>
-                        <ul class="film-card__info">
-                            <li class="film-card__rate">Rate: 7 / 10</li>
-                            <li class="film-card__length">Length: 1 hour 49 minutes</li>
-                        </ul>
-                        <div class="film-card__actions">
-                            <button class="film-card__btn film-card__btn--watched">Просмотрено</button>
-                            <button class="film-card__btn film-card__btn--watch">Смотреть</button>                        
-                        </div>  
-                </article>     
             </div>
-        </div>
+
+        <!-- попап с добавлением фильма -->
+        <dialog class="addFilm" aria-labelledby="addFilmTitle">
+            <h3 class="addFilm__title">Add your film</h3>
+            <form class="addFilm__form">
+
+                <div class="addFilm__field">
+                    <label for="filmPoster" class="addFilm__dropZone">
+                        <span class="addFilm__dropZone-text">Перетащи постер сюда или кликни</span>
+                        <img class="addFilm__preview" alt="Превью постера">
+                    </label>
+                    <input type="file" id="filmPoster" accept="image/*" required>
+                </div>
+
+                <div class="addFilm__field">
+                    <label for="filmName">Название</label>
+                    <input type="text" name="filmName" id="filmName">
+                </div>
+
+                <div class="addFilm__field">
+                    <label for="filmLength">Длительность фильма</label>
+                    <input type="text" name="filmLength" id="filmLength">
+                </div>
+                
+                <div class="addFilm__field addFilm__field-rate">
+                    <label for="filmRate">Оценка</label>
+                    <div class="addFilm__rate-row">
+                        <input type="range" name="filRate" id="filmRate" min="0" max="10" value="5" step="0.1">
+                        <output for="filmRate">5.0</output>
+                    </div>
+                </div>
+
+                <div class="addFilm__actions">
+                    <button type="submit">Создать фильм</button>
+                    <button class="closeDialogButtton" type="button">Отмена</button>
+                </div>
+            </form>
+        </dialog>
     </div>
+
+
+    <!-- пример карточки фильма -->
+    <template id="filmTemplate">
+            <article class="film-card">
+                    <div class="film-card__poster">
+                        <img src="public/images/film-blue.png" alt="Постер фильма Azure Ray" loading="lazy">
+                    </div>
+                    <h2 class="film-card__title">Azure Ray</h2>
+                    <ul class="film-card__info">
+                        <li class="film-card__rate">Rate: 3.5 / 10</li>
+                        <li class="film-card__length">Length: 1 hour 35 minutes</li>
+                    </ul>
+                    <div class="film-card__actions">
+                        <button class="film-card__btn film-card__btn--watched">Просмотрено</button>
+                        <button class="film-card__btn film-card__btn--watch">Смотреть</button>                        
+                    </div>  
+            </article>  
+    </template>
 </body>
 </html>

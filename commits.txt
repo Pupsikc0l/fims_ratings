@@ -11,3 +11,13 @@
         2: add buttons, u can click on watched, or watch (u go to url in google to watching your film)
     }
 }
+
+
+03.10.2026 v0.1 {
+    i scared of ai. a scared, because ai write code instead of me. i trying to figure it out, but ш keep sinking lower and lower into this pit. next time no ai, i'll try to write code by hands.
+    changes {
+        1: u can add the films card! (u can add preview, length, name and slider rating)
+        2: a bit changes in design.
+    }
+    on F5 site resets all yuor films, i wish i can fix that in future.
+}

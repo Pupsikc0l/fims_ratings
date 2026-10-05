@@ -35,8 +35,18 @@
                 </nav>
             </div> 
         </header>
-            
+        
+        <div class="welocome">
+            <div class="welcome__info">
+                <h1 class="welcome__title">Weclome to the films rate!</h1>
+                <p></p>
+            </div>
+            <img src="" alt="" class="welcome__image">
             <button class="showPopup">Создать фильм</button>
+        </div>
+
+
+            
         
             <div class="films">
 
@@ -77,12 +87,12 @@
 
                 <div class="addFilm__field">
                     <label for="filmName">Название</label>
-                    <input type="text" name="filmName" id="filmName">
+                    <input type="text" name="filmName" id="filmName" required>
                 </div>
 
                 <div class="addFilm__field">
                     <label for="filmLength">Длительность фильма</label>
-                    <input type="text" name="filmLength" id="filmLength">
+                    <input type="text" name="filmLength" id="filmLength" required>
                 </div>
                 
                 <div class="addFilm__field addFilm__field-rate">
@@ -94,8 +104,8 @@
                 </div>
 
                 <div class="addFilm__actions">
-                    <button type="submit">Создать фильм</button>
                     <button class="closeDialogButtton" type="button">Отмена</button>
+                    <button type="submit">Создать фильм</button>
                 </div>
             </form>
         </dialog>

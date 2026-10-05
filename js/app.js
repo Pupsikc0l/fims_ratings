@@ -1,4 +1,6 @@
 const filmsList = document.querySelector('.films-list');
+const alertDialog = document.querySelector('.delete-alert');
+let filmToDelete = null;
 
 filmsList.addEventListener('click', e => {
     // клик по кнопке "Просмотрено"
@@ -16,11 +18,40 @@ filmsList.addEventListener('click', e => {
         const query = encodeURIComponent(`смотреть ${title} онлайн бесплатно в хорошем качестве`);
         window.open(`https://www.google.com/search?q=${query}`, '_blank');
     }
+
+    // Удаление фильма по кнопке
+    const deleteBtn = e.target.closest('[data-film-card-deleteBtn]');
+    if(deleteBtn) {
+        filmToDelete = deleteBtn.closest('.film-card');
+        const dialogInlineName = alertDialog.querySelector('.delete-alert__info p');
+        const deleteFilmName = filmToDelete.querySelector('.film-card__title').textContent.trim();
+        dialogInlineName.textContent = `Вы действительно хотите удалить фильм ${deleteFilmName}?`
+        alertDialog.showModal();
+        return;
+    }
+    
 });
+
+// слушатель кнопок да/нет
+
+alertDialog.addEventListener('click', e => {
+    if(e.target.closest('[data-alert-yesBtn]')) {
+        filmToDelete.remove();
+        filmToDelete = null;
+        alertDialog.close();
+        return;
+    }
+
+    if(e.target.closest('[data-alert-noBtn]')) {
+        filmToDelete = null;
+        alertDialog.close();
+        return;
+    }
+})
 
 
 const dialog = document.querySelector('.addFilm');
-const openDialogBtn = document.querySelector('.showPopup');
+const openDialogBtn = document.querySelector('.welcome__showPopup');
 openDialogBtn.addEventListener('click', e => {
     dialog.showModal();
 })
@@ -78,4 +109,9 @@ cardForm.addEventListener('submit', e => {
     posterPreview.classList.remove('is-visible');
     dialog.close();
 })
+
+
+
+
+
 

@@ -1,7 +1,7 @@
 :root {
-    --text-color: #000000;
+    --text-color: #949ca8;
     --text-color__on-hover: #343535;
-    --background-color: linear-gradient(180deg, rgba(16, 65, 84, 1) 0%, rgba(149, 237, 208, 1) 100%);
+    --background-color: linear-gradient(170deg, rgba(16, 65, 84, 1) 15%, rgba(149, 237, 208, 1) 100%);
     --button-color: #6bd4e2ef;
     --button-color_on-hover: #a7c112;
     --button-color__cancel: #be5332;

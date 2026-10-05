@@ -21,3 +21,11 @@
     }
     on F5 site resets all yuor films, i wish i can fix that in future.
 }
+
+05.10.2026 v0.1.1 {
+    today i try writing with no ai, it can be observed in my js code :) but i liked it! it makes me happy, when i writing code myself. my code if very awful, but i liked it!
+    changes {
+        1: new Welcome page! (i dont like it a bit)
+        2: u can delete films! with alert after click on delete button. i m proud of myself
+    }
+}

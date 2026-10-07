@@ -29,3 +29,14 @@
         2: u can delete films! with alert after click on delete button. i m proud of myself
     }
 }
+
+07.10.2026 v0.2 {
+    i so fucking hate it! i hate my fucking (js)code, It’s like digging through a pile of trash, sitting right in the middle of it, trying to find what you need, all while forgetting everything every five minutes.
+    bugs and bugs, kludge and kludge every fucking second. i'm really angry. but, i write cod by myself. (this is so fucking bad, it's the worst possible decision on today)
+    it's so awful, i MUST to rewrite my (js)code. 
+    but one thing reassures me, it's a training projeect, that means i can do anythyng with my project, because i'm going to rewrite this project in future anyway. but this does not change the fact that i really, really hate it today!
+
+    changes {
+        1: u can change the film card (lol that all)
+    }
+}
